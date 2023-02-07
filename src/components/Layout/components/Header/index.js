@@ -15,10 +15,13 @@ import {
     faSignOut,
 } from '@fortawesome/free-solid-svg-icons';
 
+import { Link } from 'react-router-dom';
 import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
 import Image from '~/components/Image';
 import Search from '../Search';
+import routesConfig from '~/config/routes';
+
 import { UploadIcon, MessageIcon, InboxIcon } from '~/components/Icons';
 const cx = classNames.bind(styles);
 
@@ -38,6 +41,81 @@ const MENU_ITEMS = [
                     type: 'language',
                     code: 'vi',
                     title: 'Tiếng Việt',
+                },
+                {
+                    type: 'language',
+                    code: 'ge',
+                    title: 'German',
+                },
+                {
+                    type: 'language',
+                    code: 'Fren',
+                    title: 'French',
+                },
+                {
+                    type: 'language',
+                    code: 'ita',
+                    title: 'Italian',
+                },
+                {
+                    type: 'language',
+                    code: 'dutch',
+                    title: 'Dutch',
+                },
+                {
+                    type: 'language',
+                    code: 'ca',
+                    title: 'Canadian English',
+                },
+                {
+                    type: 'language',
+                    code: 'spa',
+                    title: 'Spainish',
+                },
+                {
+                    type: 'language',
+                    code: 'us',
+                    title: 'American English',
+                },
+                {
+                    type: 'language',
+                    code: 'aus',
+                    title: 'Australian English',
+                },
+                {
+                    type: 'language',
+                    code: 'pot',
+                    title: 'Potugese',
+                },
+                {
+                    type: 'language',
+                    code: 'ind',
+                    title: 'Indian',
+                },
+                {
+                    type: 'language',
+                    code: 'rusian',
+                    title: 'Russian',
+                },
+                {
+                    type: 'language',
+                    code: 'ko',
+                    title: 'Korean',
+                },
+                {
+                    type: 'language',
+                    code: 'jap',
+                    title: 'Japanese',
+                },
+                {
+                    type: 'language',
+                    code: 'phi',
+                    title: 'Tangalog',
+                },
+                {
+                    type: 'language',
+                    code: 'thai',
+                    title: 'Thai',
                 },
             ],
         },
@@ -93,7 +171,9 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <img src={images.logo} alt="Tiktok" />
+                <Link to={routesConfig.home} className={cx('logo-link')}>
+                    <img src={images.logo} alt="Tiktok" />{' '}
+                </Link>
                 <Search />
                 <div className={cx('actions')}>
                     {currentUser ? (

@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import { useDebounce } from '~/hooks';
-import * as searchServices from '~/apiServices/searchServices';
+import * as searchServices from '~/Services/searchService';
 
 import { faCircleXmark, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -56,6 +56,7 @@ function Search() {
     };
 
     return (
+        //
         <div>
             <HeadlessTippy
                 interactive
